@@ -1,0 +1,25 @@
+<%= form_for(@form_for_var, method: @method, url: @url) do |f| %>
+  <p>
+    <%= f.label :artist %><br>
+    <%= f.text_field :artist %>
+  </p>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </p>
+  <p>
+    <%= f.label :album %><br>
+    <%= f.text_area :album %>
+  </p>
+  <p>
+    <%= f.label :bpm %><br>
+    <%= f.text_area :bpm %>
+  </p>
+  <p>
+    <%= f.label :key %><br>
+    <%= f.text_area :key %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

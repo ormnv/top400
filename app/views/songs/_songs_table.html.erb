@@ -1,0 +1,15 @@
+<h2>Songs</h2>
+<table>
+	<tr>
+	  <td><p> artist </p></td>
+	  <td><p> title  </p></td>
+	  <td><p> album  </p></td>
+	  <td><p> key  	</p></td>
+	  <td><p> bpm  </p></td>     
+	</tr>
+		<% songs.each do |song| %>
+			<% unless song.id.nil? %>
+				<%= render 'songs/song_cell', song: song %>
+			<% end %>
+		 <% end %>
+</table>

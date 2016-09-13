@@ -1,0 +1,22 @@
+<h1>Show</h1>
+  <p>
+    <%= @show.title %><br>
+  </p>
+
+  <p>
+    <%= @show.date %><br>
+  </p>
+
+   <p>
+    <%= @show.dj %><br>
+  </p>
+ 
+  <p>
+    <%= @show.playlist %><br>
+  </p>
+
+<%= render 'songs/songs_table', songs: @show.songs %>
+<%= render 'songs/song_form' %>
+
+<td><%= link_to 'Edit Show', edit_show_path(@show) %></td>
+<%= link_to 'Back', shows_path %>
