@@ -13,10 +13,11 @@
   <% @shows.each do |show| %>
     <tr>
       <td><%= show.title %></td>
-      <td><%= show.dj %></td>
+      <td><p><%= show.djNames%></p></td>
       <td><%= show.date %></td>
       <td><%= show.file %></td>
       <td><%= show.description %></td>
+
       <td><%= link_to 'Show', show_path(show) %></td>
       <td><%= link_to 'Edit Show', edit_show_path(show) %></td>
       <td><%= button_to 'Destroy Show', { action: :destroy, id: show.id }, method: :delete, data: { confirm: 'Are you sure?' } %></td>

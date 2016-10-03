@@ -37,7 +37,7 @@ class SongsController < ApplicationController
 		@url = show_song_path(@show)
 	end
 
-	 def destroy
+	def destroy
 	    @show = Show.find(params[:show_id])
     	@song = @show.songs.find(params[:id])
     	@song.destroy

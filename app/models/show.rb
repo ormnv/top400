@@ -17,8 +17,12 @@ class Show < ApplicationRecord
 	has_many :songs, through: :show_songs
 	has_many :djs, through: :dj_shows
 
-	validates :title, presence: true, length: { minimum: 5 }
-	# validates :djs, presence: true
+	validates :title, presence: true
+	validates :djs, presence: true
 	validates :date, presence: true
 	validates :description, presence: true
+
+	def djNames
+		djs.pluck(:name).join(' , ')
+	end
 end

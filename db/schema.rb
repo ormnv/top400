@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160913184146) do
     t.string   "album"
     t.decimal  "bpm",        precision: 10
     t.string   "key"
+    t.integer  "order"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

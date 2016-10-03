@@ -4,6 +4,4 @@
       <td><%= song.album  %></td>
       <td><%= song.key  %></td>
       <td><%= song.bpm  %></td>     
-      <td><%= link_to 'Edit Song', edit_show_song_path(song.show.id, song.id) %></td>
-      <td><%= button_to 'Destroy Song', [song.show, song], method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
