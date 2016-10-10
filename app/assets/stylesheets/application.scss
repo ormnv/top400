@@ -1,3 +1,117 @@
 // Place all the styles related to the application controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bits";
+@import "grid";
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.box {
+	border-color: $light-grey;
+    border-style: outset;
+    border-width: 3px;
+    position: absolute
+}
+
+.box_header {
+	width: 100%;
+	border-width: 1px;
+	border-color: $light-grey;
+	border-style: groove;
+	text-align: center;
+	p{
+		font-weight: bold;
+		font-size: 1em;
+		margin: 0 0 0 0;
+	}
+}
+
+#timer{
+	margin: 0 0 0 0;
+	text-align: justify;
+}
+
+#mini_countdown_container {
+	background-color: $light-orange;
+	width: 26em;
+	height: 10em;
+	font-size: 1em;
+	text-align: justify;
+	top: .5em;
+	left: 1em;
+}
+
+#about_container {
+	background-color: $light-green;
+	text-align: justify;
+	width: 16em;
+	height: 16em;
+	top: 20em;
+	left: 4em;
+	p{
+		margin: 0 0 0 0;
+		font-size: 1em;
+	}
+}
+
+#timer_container {
+	background-color: $light-grey;
+	height:4em;
+	width: 32em;
+	top: 1em;
+	left: 32em;
+}
+
+#show_container {
+	background-color: $olive;
+}
+
+#latest_shows_container {
+	background-color: $orange;
+	width: 24em;
+	height: 6em;
+	top: 12em;
+	left: 3em;
+}
+
+#latest_show_image_container{
+	width: 32em;
+	height: 30em;
+	top: 2em;
+	left: 15em;
+	background-color: $light-grey;
+	img{
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 0;
+		width: 31.8em;
+    	height: 28.4em;
+	}
+}
+
+#future_show_image_container{
+	width: 32em;
+	height: 30em;
+	top: 7em;
+	left: 33em;
+	background-color: $light-grey;
+	img{
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 0;
+		width: 31.8em;
+    	height: 28.4em;
+	}
+}
+
+.link_container {
+}
+
+

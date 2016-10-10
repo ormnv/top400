@@ -1,28 +1,29 @@
-<h1>Shows#index</h1>
+<div id = "shows_list_container"
+  <h1>Shows#index</h1>
 
-<h1>Listing shows</h1>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>DJ</th>
-    <th>Date</th>
-    <th>File</th>
-    <th>Description</th>
-  </tr>
- 
-  <% @shows.each do |show| %>
+  <h1>Listing shows</h1>
+  <table id = "shows">
     <tr>
-      <td><%= show.title %></td>
-      <td><p><%= show.djNames%></p></td>
-      <td><%= show.date %></td>
-      <td><%= show.file %></td>
-      <td><%= show.description %></td>
-
-      <td><%= link_to 'Show', show_path(show) %></td>
-      <td><%= link_to 'Edit Show', edit_show_path(show) %></td>
-      <td><%= button_to 'Destroy Show', { action: :destroy, id: show.id }, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th>Title</th>
+      <th>DJ</th>
+      <th>Date</th>
+      <th>Image</th>
+      <th>Description</th>
     </tr>
-  <% end %>
-</table>
+   
+    <% @shows.each do |show| %>
+      <tr>
+        <td><%= show.title %></td>
+        <td><p><%= show.djNames%></p></td>
+        <td><%= show.formatted_date %></td>
+        <td><%= show.image %></td>
+        <td><%= show.description %></td>
+        <td><%= link_to 'Show', show_path(show) %></td>
+      </tr>
+    <% end %>
+  </table>
 
-<%= link_to 'New show', new_show_path %>
+  <div class = "link_container">
+    <%= link_to 'Back', root_path %>  
+  </div>
+</div>

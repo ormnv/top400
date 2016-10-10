@@ -1,20 +1,34 @@
-<h1>Show</h1>
-  <p>
-    <%= @show.title %><br>
-  </p>
+<div id = "show_container">
+  <h1>Show</h1>
+    <p>
+      <%= @show.title %><br>
+    </p>
 
-  <p>
-    <%= @show.date %><br>
-  </p>
+    <p>
+      <%= @show.formatted_date %><br>
+    </p>
 
-  <p>
-    <%= @show.djNames %><br>
-  </p>
- 
-  <p>
-    <%= @show.description %><br>
-  </p>
+    <p>
+      <%= @show.djNames %><br>
+    </p>
+   
+    <p>
+      <%= @show.description %><br>
+    </p>
 
-<%= render 'songs/songs_table', songs: @show.songs %>
+    <p>
+      <img src="<%= asset_path( @show.image ) %>" />
+    </p>
 
-<%= link_to 'Back', shows_path %>
+    <a href=<%= @show.link_to_soundcloud %>>soundcloud</a>
+
+    <a href=<%= @show.link_to_newtown_radio %>>Archive on Newtown Radio</a>
+
+
+  <%= render 'songs/songs_table', songs: @show.songs %>
+
+  <div class = "link_container">
+    <%= link_to 'All Shows', shows_path %>
+    <%= link_to 'Back', root_path %>  
+  </div>
+</div>

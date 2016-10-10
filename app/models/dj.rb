@@ -11,6 +11,7 @@
 
 class Dj < ApplicationRecord
 	has_many :dj_shows
+	# has_many :songs, through: :shows
 	has_many :shows, through: :dj_shows
 	# has_many :songs, through: :show_songs
 	validates :name, presence: true

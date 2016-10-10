@@ -1,7 +1,14 @@
-<tr>
-      <td><%= song.artist %></td>
-      <td><%= song.title  %></td>
-      <td><%= song.album  %></td>
-      <td><%= song.key  %></td>
-      <td><%= song.bpm  %></td>     
+<tr class = "song_cell">
+	  <td><%= order_number %>.</td>
+      <td>
+      	<span class = "artist">
+      		<%= song.artist %>
+      	</span> - 
+      	<span class = "title">
+      		<%= song.title  %>,
+      	</span>
+      	<span class = "album">
+      		<%= song.album  %>
+      	</span>
+      </td>   
 </tr>

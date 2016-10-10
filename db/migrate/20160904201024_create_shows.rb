@@ -2,9 +2,10 @@ class CreateShows < ActiveRecord::Migration[5.0]
   def up
     create_table :shows do |t|
       t.string   :title
-      # t.integer  :dj_id
       t.date     :date
-      t.string   :file
+      t.string   :image
+      t.string   :link_to_soundcloud
+      t.string   :link_to_newtown_radio
       t.text     :description
       t.timestamps
     end

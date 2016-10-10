@@ -26,20 +26,15 @@ ActiveRecord::Schema.define(version: 20160913184146) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "show_songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "song_id"
-    t.integer  "show_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shows", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.date     "date"
-    t.string   "file"
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "image"
+    t.string   "link_to_soundcloud"
+    t.string   "link_to_newtown_radio"
+    t.text     "description",           limit: 65535
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -49,8 +44,11 @@ ActiveRecord::Schema.define(version: 20160913184146) do
     t.decimal  "bpm",        precision: 10
     t.string   "key"
     t.integer  "order"
+    t.integer  "show_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.index ["show_id"], name: "index_songs_on_show_id", using: :btree
   end
 
+  add_foreign_key "songs", "shows"
 end

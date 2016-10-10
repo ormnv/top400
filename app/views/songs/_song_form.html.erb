@@ -1,4 +1,4 @@
-<%= form_for(@form_for_var, method: @method, url: @url) do |f| %>
+<%= form_for(@form_for_var, method: @method, url: @url, id: song_form) do |f| %>
   <p>
     <%= f.label :artist %><br>
     <%= f.text_field :artist %>

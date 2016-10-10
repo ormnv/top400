@@ -43,6 +43,10 @@ class SongsController < ApplicationController
     	@song.destroy
     	redirect_to show_path(@show)
   	end
+
+  	def countdown
+  		@sorted_songs = Song.sort_by_play_count(400)
+  	end
  
 	private
 

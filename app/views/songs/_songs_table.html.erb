@@ -1,15 +1,13 @@
-<h2>Songs</h2>
-<table>
-	<tr>
-	  <td><p> artist </p></td>
-	  <td><p> title  </p></td>
-	  <td><p> album  </p></td>
-	  <td><p> key  	</p></td>
-	  <td><p> bpm  </p></td>     
-	</tr>
-		<% songs.each do |song| %>
-			<% unless song.id.nil? %>
-				<%= render 'songs/song_cell', song: song %>
-			<% end %>
-		 <% end %>
-</table>
+<div id = "songs_table_container">
+	<table id = "songs_table">
+		<tr class = "songs_table_row">   
+		</tr>
+			<% @order_number = 0 %>
+			<% songs.each do |song| %>
+				<% if song.id.present? %>
+					<% @order_number += 1 %>
+					<%= render 'songs/song_cell', song: song, order_number: @order_number %>
+				<% end %>
+			 <% end %>
+	</table>
+</div>

@@ -7,7 +7,7 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.decimal    :bpm
       t.string     :key
       t.integer    :order
-      # t.references :show, foreign_key: true
+      t.references :show, foreign_key: true, index: true
       t.timestamps
     end
   end

@@ -53,30 +53,34 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  RailsAdmin.config do |config|
-    config.model 'Show' do
-      import do
-        mapping_key :id
-        # include_all_fields
-      end
-    end
-  end  
+  # RailsAdmin.config do |config|
+  #   config.model 'Show' do
+  #     field :dj_shows do
+  #       inline_add false
+  #     end
+  #   end
+  # end  
 
   RailsAdmin.config do |config|
     config.model 'Song' do
       import do
         mapping_key :id
         # include_all_fields
-        field :show_id do # (4)
-          searchable [:name, :id]
-          # eq. to [Team => :name, Team => :id]
-          # or even [:name, Player => :team_id] will search on teams.name and players.team_id
-          # if you need to specify the join association name:
-          # (See #526 and http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html => table_aliasing)
-          searchable [{:shows => :name}, {:shows => :id}]
-          # or
-          searchable ["shows.name", "shows.id"]
-        end
+        # field :show_id 
+        # field :dj_id
+        # do # (4)
+          # searchable [:name, :id]
+          # # eq. to [Team => :name, Team => :id]
+          # # or even [:name, Player => :team_id] will search on teams.name and players.team_id
+          # # if you need to specify the join association name:
+          # # (See #526 and http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html => table_aliasing)
+          # searchable [{:shows => :name}, {:shows => :id}]
+          # # or
+          # searchable ["shows.name", "shows.id"]
+          # label do
+          #   "#{label} (timestamp)"
+          # end
+        # end
       end
     end
   end  

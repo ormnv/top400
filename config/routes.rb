@@ -1,24 +1,16 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  # get 'users/new'
+  # get 'sessions/new'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'show/index'
+  get 'songs/countdown'
 
   # get 'top400/index'
   resources :shows do
   	resources :songs
   end
-
-  # get    '/signup',  to: 'users#new'
-  # get    '/login',   to: 'sessions#new'
-  # post   '/login',   to: 'sessions#create'
-  # delete '/logout',  to: 'sessions#destroy'
-  # resources :users
   
   root 'top400#index'
-  # devise_for :user
 
   # get 'application/index'
 

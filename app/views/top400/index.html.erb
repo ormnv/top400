@@ -1,10 +1,13 @@
-<h1>Top400#index</h1>
-
-<h1>Hello, Rails!</h1>
-<%= link_to 'Shows', controller: 'shows' %>
-<%= link_to 'New Show', new_show_path %>
-
-<%= render 'timer' %>
-<%= render 'about' %>
-<%= render 'songs/countdown' %>
+<div id = "page_container">
+	<h1 id = "title">
+	</h1>
+	<% unless Show.future_shows(1).empty? %>
+		<%= render 'shows/future_show_image' %>
+	<% end %>
+	<%= render 'songs/mini_countdown' %>
+	<%= render 'shows/latest_shows' %>
+	<%= render 'shows/latest_show_image' %>
+	<%= render 'about' %>
+	<%= render 'timer' %>
+</div>
 

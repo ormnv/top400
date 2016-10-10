@@ -46,7 +46,7 @@ class ShowsController < ApplicationController
 
 	private
 	  def show_params
-	    params.require(:show).permit(:title, :dj, :date, :file, :description)
+	    params.require(:show).permit(:title, :date, :image, :description, :link_to_soundcloud, :link_to_newtown_radio)
 	  end
 	
 end
