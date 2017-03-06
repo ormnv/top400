@@ -1,0 +1,23 @@
+body {
+  font: 100% Helvetica, Arial, sans-serif;
+  color: #333; }
+
+#mini_countdown {
+  background-color: #f9dbbd; }
+
+#about_container {
+  background-color: #efffc8; }
+
+#timer_container {
+  background-color: #d3d0cb; }
+
+#show_container {
+  background-color: #d3d0cb; }
+
+#latest_shows_container {
+  background-color: #fca311; }
+
+.link_container {
+  background-color: #6320ee; }
+
+/*# sourceMappingURL=application.css.map */

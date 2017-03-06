@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show Layout</title>
+    <%= csrf_meta_tag %>
+
+    <%= stylesheet_link_tag    'songs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'shows', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+
+  </head>
+
+  <body>
+    <h1> shows layout </h1>
+    <%= yield %>
+  </body>
+</html>

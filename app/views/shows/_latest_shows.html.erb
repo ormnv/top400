@@ -1,0 +1,18 @@
+<div id = "latest_shows_container" class = "draggable box">
+	<div class = "box_header"> 
+		<p>
+			<%=t('latest_shows')%>
+		</p>
+	</div>
+	
+	<table id= "latest_shows">
+		<% Show.latest_shows(3).each do |show| %>
+			  <td><%= link_to show.title, show_path(show) %></td>
+			</tr>
+		<% end %>
+	</table>
+	<div class = "link_container">
+		<% number_of_shows = Show.latest_shows().size - 2 %>
+		<%= link_to "#{number_of_shows} more shows...", shows_path %>
+	</div>
+</div>

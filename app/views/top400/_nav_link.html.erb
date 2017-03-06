@@ -1,0 +1,12 @@
+<div id = "nav_container" class = "draggable box" >
+	<div class = "box_header"> 
+		<p>
+			<%= t("nav.#{link}") %>
+		</p>
+	</div>
+	<span id="#{link}_link" class = "nav_link">
+    	<%= link_to path do %>
+    		<%= fa_icon icon %>
+    	<% end %>
+    </span>
+</div>

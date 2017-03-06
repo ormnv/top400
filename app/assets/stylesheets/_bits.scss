@@ -1,0 +1,75 @@
+
+$font-stack		: Lucida Console, Monaco, monospace;
+
+body {
+  font: 100% $font-stack;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+/*********************
+COLORS
+*********************/
+
+$primary-color 	: #333;
+$orange  	   	: #fca311;
+$light-orange 	: #f9dbbd;
+$bright-green  	: #85cb33;
+$light-green   	: #efffc8;
+$light-grey		: #d3d0cb;
+$grey 			: #7a7d7d;
+$dark-grey 	 	: #191923;
+$almost-black   : #100b00;
+$off-white 		: #fffbfe;
+$olive 			: #d3d0cb;
+$purple         : #6320ee;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
+
+/*********************
+DRAGGABLE
+*********************/
+
+.box {
+	border-color: $light-grey;
+    border-style: outset;
+    border-width: 3px;
+    position: absolute
+}
+
+.box_header {
+	width: 100%;
+	border-width: 1px;
+	border-color: $light-grey;
+	border-style: groove;
+	text-align: center;
+	p{
+		font-weight: bold;
+		font-size: 1em;
+		margin: 0 0 0 0;
+	}
+}

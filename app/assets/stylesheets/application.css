@@ -1,3 +1,7 @@
+@import url(font-awesome.css);
+body {
+  font: 100% Lucida Console, Monaco, monospace; }
+
 img {
   width: auto;
   height: auto; }
@@ -8,6 +12,26 @@ COLORS
 /*********************
 BREAKPOINTS
 *********************/
+/*********************
+DRAGGABLE
+*********************/
+.box {
+  border-color: #d3d0cb;
+  border-style: outset;
+  border-width: 3px;
+  position: absolute; }
+
+.box_header {
+  width: 100%;
+  border-width: 1px;
+  border-color: #d3d0cb;
+  border-style: groove;
+  text-align: center; }
+  .box_header p {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 0 0 0; }
+
 .grid-1-4 {
   width: 100%; }
   @media (min-width: 37.5em) {
@@ -34,27 +58,6 @@ BREAKPOINTS
       width: 50%;
       background-color: red; } }
 
-body {
-  font: 100% Lucida Console, Monaco, monospace;
-  color: #333; }
-
-.box {
-  border-color: #d3d0cb;
-  border-style: outset;
-  border-width: 3px;
-  position: absolute; }
-
-.box_header {
-  width: 100%;
-  border-width: 1px;
-  border-color: #d3d0cb;
-  border-style: groove;
-  text-align: center; }
-  .box_header p {
-    font-weight: bold;
-    font-size: 1em;
-    margin: 0 0 0 0; }
-
 #timer {
   margin: 0 0 0 0;
   text-align: justify; }
@@ -62,7 +65,7 @@ body {
 #mini_countdown_container {
   background-color: #f9dbbd;
   width: 26em;
-  height: 10em;
+  height: auto;
   font-size: 1em;
   text-align: justify;
   top: .5em;
@@ -72,7 +75,7 @@ body {
   background-color: #efffc8;
   text-align: justify;
   width: 16em;
-  height: 16em;
+  height: auto;
   top: 20em;
   left: 4em; }
   #about_container p {
@@ -123,5 +126,9 @@ body {
     margin-bottom: 0;
     width: 31.8em;
     height: 28.4em; }
+
+#newtown_container {
+  background-color: #d3d0cb;
+  height: auto; }
 
 /*# sourceMappingURL=application.css.map */

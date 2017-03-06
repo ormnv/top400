@@ -24,15 +24,35 @@
     <%= f.date_select :date %>
   </p>
 
-   <p>
-    <%= f.label :dj %><br>
-    <%= f.text_field :dj %>
+  <p>
+    <%= f.label :is_standalone %>
+    <%= f.check_box :is_standalone %><br>
   </p>
- 
+
+  <p>
+    <%= f.label :flyer %><br>
+     <%= f.file_field :flyer %>
+  </p>
+
+  <p>
+    <%= f.label :link_to_soundcloud %><br>
+    <%= f.text_field :link_to_soundcloud %>
+  </p>
+
+  <p>
+    <%= f.label :link_to_newtown_radio %><br>
+    <%= f.text_field :link_to_newtown_radio %>
+  </p>
+
   <p>
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </p>
+
+  <h4>
+  Tracklist
+  </h4>
+   <%= f.file_field :tracklist %>
  
   <p>
     <%= f.submit %>

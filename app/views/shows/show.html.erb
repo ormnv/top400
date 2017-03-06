@@ -1,34 +1,30 @@
 <div id = "show_container">
-  <h1>Show</h1>
-    <p>
-      <%= @show.title %><br>
-    </p>
+	<%= render 'show_description', show: @show %>
 
-    <p>
-      <%= @show.formatted_date %><br>
-    </p>
+	<% if @show.is_standalone? %>
+		<p> Standalone tracklist </p>
+	<% end %>
 
-    <p>
-      <%= @show.djNames %><br>
-    </p>
-   
-    <p>
-      <%= @show.description %><br>
-    </p>
+	<%= render 'top400/nav' %>
 
-    <p>
-      <img src="<%= asset_path( @show.image ) %>" />
-    </p>
+	<%= render 'top400/nav_link', link: "shows", icon: "smile-o 5x", path: shows_path %>
+	<%= render 'top400/nav_link', link: "countdown", icon: "sort-numeric-asc 5x", path: songs_countdown_path %>
+	<%= render 'top400/nav_link', link: "home", icon: "home 5x", path: root_path %>
 
-    <a href=<%= @show.link_to_soundcloud %>>soundcloud</a>
+	<% unless @show.is_standalone? %>
+		<%= render 'show_flyer', show: @show %>
+	<% end %>
 
-    <a href=<%= @show.link_to_newtown_radio %>>Archive on Newtown Radio</a>
+	<% if @show.has_tracklist? %>
+  		<%= render 'tracklist', songs: @show.songs_in_order %>
+ 	<% end %>
 
-
-  <%= render 'songs/songs_table', songs: @show.songs %>
-
-  <div class = "link_container">
-    <%= link_to 'All Shows', shows_path %>
-    <%= link_to 'Back', root_path %>  
-  </div>
 </div>
+
+<%= javascript_tag do %>
+  makeDraggables();
+<% end %>
+
+<% if session[:current_user] %>
+  <li><%= link_to 'Log OUT', logout_sessions_path %></li>
+<% end %>

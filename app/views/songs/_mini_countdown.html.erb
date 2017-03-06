@@ -1,0 +1,14 @@
+<div id= "mini_countdown_container" class = "draggable box">
+	<div class = "box_header"> 
+		<p>
+			<%=t('countdown')%>
+		</p>
+	</div>
+	<div id = "mini_countdown">
+	 	<%= render 'songs/songs_table', songs: Song.sort_by_play_count(3) %>
+	 	<% song_count = Song.all.size %>
+	 	<div class = "link_container">
+			<%= link_to "#{song_count} more tracks...", songs_countdown_path %>
+		</div>
+	</div>
+</div>

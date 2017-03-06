@@ -1,0 +1,16 @@
+<div id = "nav_container" class = "draggable box" >
+	<div class = "box_header"> 
+	</div>
+	<span id="shows_link" class = "nav_link">
+    	<%= link_to 'Shows', shows_path %>
+    	<%= fa_icon "smile-o" %>
+    </span>
+   	<span id="home_link" class = "nav_link">
+    	<%= link_to 'Home', root_path %>  
+    	<%= fa_icon "home" %>
+    </span>
+    <span id="countdown_link" class = "nav_link">
+    	<%= link_to "Top 400 Tracks", songs_countdown_path %>
+    	<%= fa_icon "sort-numeric-asc" %>
+    </span>
+</div>

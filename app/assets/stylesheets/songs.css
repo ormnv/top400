@@ -1,0 +1,15 @@
+table#songs_table tr {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+  table#songs_table tr:hover {
+    opacity: 0.5; }
+table#songs_table .artist {
+  font-weight: 900; }
+table#songs_table .title {
+  font-weight: bold; }
+table#songs_table .album {
+  font-style: italic; }
+
+/*# sourceMappingURL=songs.css.map */

@@ -1,0 +1,11 @@
+<div id= "tracklist_container" class="draggable box">
+	<div class = "box_header"> 
+		<p>
+			<%=t('tracklist')%>
+		</p>
+	</div>
+	<div class = "tracklist">
+	 	<%= render 'songs/songs_table', songs: songs %>
+	 	<% song_count = songs.size %>
+	</div>
+</div>

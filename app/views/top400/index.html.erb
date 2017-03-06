@@ -6,8 +6,14 @@
 	<% end %>
 	<%= render 'songs/mini_countdown' %>
 	<%= render 'shows/latest_shows' %>
-	<%= render 'shows/latest_show_image' %>
+	<% unless Show.all.empty? %>
+		<%= render 'shows/latest_show_image' %>
+	<% end %>
 	<%= render 'about' %>
 	<%= render 'timer' %>
+	<%= render 'newtown_link' %>
 </div>
 
+<%= javascript_tag do %>
+  makeDraggables();
+<% end %>

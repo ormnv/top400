@@ -1,3 +1,7 @@
 <h1>New Show</h1>
 <%= render 'form', method: :post, url: shows_path %>
 <%= link_to 'Back', shows_path %>
+
+<% if session[:current_user] %>
+  <li><%= link_to 'Log OUT', logout_sessions_path %></li>
+<% end %>

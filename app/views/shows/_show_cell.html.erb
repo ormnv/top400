@@ -1,0 +1,18 @@
+  <tr>
+    <td><%= show.formatted_date %></td>
+    <td><%= show.description %></td>
+    <% if session[:current_user] %>
+        <td><%= link_to 'edit', edit_show_path(show) %></td>
+        <td><%= link_to 'destroy', destroy_show_path(show) %></td>
+	<% end %>
+	<td>
+		<div class = "show_cell draggable box">
+			<div class = "box_header"> 
+				<p>
+					<%= link_to show.title, show_path(show) %>
+				</p>
+			</div>
+			<%= link_to image_tag(asset_path("#{show.flyer}")), show_path(show) %>
+		</div>
+	</td>
+  </tr>

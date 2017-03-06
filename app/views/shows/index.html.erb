@@ -1,6 +1,4 @@
 <div id = "shows_list_container"
-  <h1>Shows#index</h1>
-
   <h1>Listing shows</h1>
   <table id = "shows">
     <tr>
@@ -12,18 +10,48 @@
     </tr>
    
     <% @shows.each do |show| %>
+      <%= render 'show_cell', show: show %>
+
       <tr>
-        <td><%= show.title %></td>
+        <td><%= link_to show.title, show_path(show) %></td>
         <td><p><%= show.djNames%></p></td>
         <td><%= show.formatted_date %></td>
-        <td><%= show.image %></td>
+        <td><img src="<%= asset_path("#{show.flyer}") %>" /></td>
         <td><%= show.description %></td>
-        <td><%= link_to 'Show', show_path(show) %></td>
+        <td><%= link_to 'edit', edit_show_path(show) %></td>
       </tr>
     <% end %>
   </table>
 
+<% if session[:current_user] %>
+  <div id = "tracklists_list_container"
+  <h1>Listing tracklists</h1>
+  <table id = "tracklists">
+    <tr>
+      <th>Title</th>
+      <th>DJ</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+   
+    <% @tracklists.each do |tracklist| %>
+      <tr>
+        <td><%= link_to tracklist.title, show_path(tracklist) %></td>
+        <td><p><%= tracklist.djNames%></p></td>
+        <td><%= tracklist.formatted_date %></td>
+        <td><%= tracklist.description %></td>
+        <td><%= link_to 'edit', edit_show_path(tracklist) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
   <div class = "link_container">
     <%= link_to 'Back', root_path %>  
+    <%= link_to 'new show', new_show_path %>  
   </div>
 </div>
+
+<% if session[:current_user] %>
+  <li><%= link_to 'Log OUT', logout_sessions_path %></li>
+<% end %>

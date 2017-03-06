@@ -3,3 +3,8 @@
 <%= render 'form', method: :patch, url: show_path(@show) %>
 
 <%= link_to 'Back', shows_path %>
+
+
+<% if session[:current_user] %>
+  <li><%= link_to 'Log OUT', logout_sessions_path %></li>
+<% end %>

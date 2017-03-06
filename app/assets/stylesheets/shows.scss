@@ -1,3 +1,33 @@
 // Place all the styles related to the Shows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bits";
+@import "grid";
+@import "font-awesome.css";
+
+#show_flyer_container {
+	width: 32em;
+	height: 30em;
+	top: 2em;
+	left: 15em;
+	background-color: $light-grey;
+	img{
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 0;
+		width: 31.8em;
+    	height: 28.4em;
+	}
+}
+
+#tracklist_container {
+	background-color: $light-orange;
+	width: 40em;
+	height: auto;
+	font-size: 1em;
+	text-align: justify;
+	top: .5em;
+	left: 1em;
+}

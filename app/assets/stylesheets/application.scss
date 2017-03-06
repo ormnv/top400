@@ -4,32 +4,7 @@
 
 @import "bits";
 @import "grid";
-
-
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
-
-.box {
-	border-color: $light-grey;
-    border-style: outset;
-    border-width: 3px;
-    position: absolute
-}
-
-.box_header {
-	width: 100%;
-	border-width: 1px;
-	border-color: $light-grey;
-	border-style: groove;
-	text-align: center;
-	p{
-		font-weight: bold;
-		font-size: 1em;
-		margin: 0 0 0 0;
-	}
-}
+@import "font-awesome.css";
 
 #timer{
 	margin: 0 0 0 0;
@@ -39,7 +14,7 @@ body {
 #mini_countdown_container {
 	background-color: $light-orange;
 	width: 26em;
-	height: 10em;
+	height: auto;
 	font-size: 1em;
 	text-align: justify;
 	top: .5em;
@@ -50,7 +25,7 @@ body {
 	background-color: $light-green;
 	text-align: justify;
 	width: 16em;
-	height: 16em;
+	height: auto;
 	top: 20em;
 	left: 4em;
 	p{
@@ -109,6 +84,11 @@ body {
 		width: 31.8em;
     	height: 28.4em;
 	}
+}
+
+#newtown_container{
+	background-color: $light-grey;
+	height: auto;
 }
 
 .link_container {

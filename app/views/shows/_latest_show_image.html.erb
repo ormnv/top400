@@ -1,0 +1,9 @@
+<div id = "latest_show_image_container" class = "draggable box">
+	<div class = "box_header"> 
+		<p>
+			<%=t('latest_show')%>
+		</p>
+	</div>
+	<% latest_show = Show.latest_shows(1).first %>
+	<%= link_to image_tag(asset_path("#{latest_show.flyer}")), show_path(latest_show) %>
+</div>

@@ -1,0 +1,9 @@
+<div id = "future_show_image_container" class = "draggable box">
+	<div class = "box_header"> 
+		<p>
+			<%=t('future_show')%>
+		</p>
+	</div>
+  <% next_show = Show.future_shows(1).first %>
+  <%= link_to image_tag(asset_path("#{next_show.flyer}")), show_path(next_show) %>
+</div>
