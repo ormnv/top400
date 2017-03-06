@@ -6,10 +6,10 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.string     :album
       t.decimal    :bpm
       t.string     :key
-      t.integer    :order
-      t.references :show, foreign_key: true, index: true
+      t.integer    :play_count, default: 0
       t.timestamps
     end
+    add_index :songs, [:artist, :title, :album, :bpm, :key], :unique => true
   end
 
   def down

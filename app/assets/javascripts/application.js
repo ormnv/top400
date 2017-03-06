@@ -19,20 +19,24 @@
 
 console.log("in top400");
 
-jQuery( document ).ready(function() {
-	console.log("loaded");
-    jQuery( ".draggable" ).draggable({
-    	opacity: 0.35,
-    	zIndex: 1000,
-    	start: function() {
-            // $(this).effect("highlight", {}, 1000);
-            jQuery(this).css( "cursor","move" );
-            jQuery('.box').css('z-index', '100');
-            jQuery(this).css('z-index', '500');
-        },
-        stop: function() {
-            jQuery(this).css("cursor","default");
-            jQuery(this).css('z-index', '500');
-        }
+function makeDraggables() {
+    jQuery( document ).ready(function() {
+    	console.log("loaded");
+        jQuery( ".draggable" ).draggable({
+        	opacity: 0.35,
+        	zIndex: 1000,
+        	start: function() {
+                // $(this).effect("highlight", {}, 1000);
+                jQuery(this).css( "cursor","move" );
+                jQuery('.box').css('z-index', '100');
+                jQuery(this).css('z-index', '500');
+                console.log("dragging start");
+            },
+            stop: function() {
+                jQuery(this).css("cursor","default");
+                jQuery(this).css('z-index', '500');
+                console.log("dragging stop");
+            }
+        });
     });
-});
+}

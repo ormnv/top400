@@ -14,5 +14,8 @@ class Dj < ApplicationRecord
 	# has_many :songs, through: :shows
 	has_many :shows, through: :dj_shows
 	# has_many :songs, through: :show_songs
+	# validates :name, presence: true
+
 	validates :name, presence: true
+	validates_uniqueness_of :name, :case_sensitive => false
 end

@@ -30,12 +30,15 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'yaml_db'
 gem 'mysql2'
 gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.0.0.rc'
+# gem 'rails_admin', '>= 1.0.0.rc'
 gem 'annotate'
-gem "rails_admin_import", "~> 2.0.0"
-
+# gem "rails_admin_import", "~> 2.0.0"
+gem "font-awesome-rails"
+gem "paperclip", "~> 5.0.0"
+# gem "font-awesome-sass"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
